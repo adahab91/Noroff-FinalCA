@@ -1,0 +1,11 @@
+<div class="[ login ]">
+  <div>
+    <form [formGroup]="form" (ngSubmit)="userDetails(form.value)">
+      <input type="text" placeholder="Please enter a username" formControlName="username"/><br/>
+      <span class="[ errors ]" *ngIf="isUsername">Wrong username</span>
+      <input type="password" placeholder="Please enter a password" formControlName="password"/><br/>
+      <span class="[ errors ]" *ngIf="isPassword">Wrong password</span>
+      <button type="Submit">Submit</button>
+    </form>
+  </div>
+</div>
