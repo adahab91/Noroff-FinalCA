@@ -1,0 +1,12 @@
+.login{
+    border: solid 1px salmon;
+    padding: 2%;
+    width: 30vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+        &__header{
+            font-size: 1em;
+            margin-bottom: 20px;
+        }
+}
