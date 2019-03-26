@@ -19,7 +19,7 @@ export class CardspecificPageComponent implements OnInit {
 
   ngOnInit() {
     this.CardspecificService.getSpecificCard()
-    .subscribe(
+    .subscribe( 
       myCard => {
         this.specificCardArray = myCard.cards;
         
