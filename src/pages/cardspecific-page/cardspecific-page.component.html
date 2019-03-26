@@ -1,0 +1,8 @@
+<div class="[ col-sm-4 ][ cards__container ]" *ngFor="let myCard of specificCardArray">
+  <div class="[ cards ]">
+      <h3 class="[ cards__heading ]">{{myCard.name}}</h3>
+      <img class="[ cards__image img-fluid ]" src="{{myCard.imageUrl}}"/><br>
+      <p>{{myCard.text}}</p>
+      <a class="[ cards__button ]" [router-link]="['/cardspecific', myCard.id]">View more</a>
+    </div>
+</div>

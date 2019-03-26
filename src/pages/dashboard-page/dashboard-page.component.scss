@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro|Yeon+Sung');
+$sourceSansPro: "Source Sans Pro", sans-serif;
+$yeonSung: 'Yeon Sung', cursive;
+
+
+.dashboard{
+    &__header{
+
+    }
+    &__text{
+        margin-bottom: 10%;
+    }
+    &__div{
+        background-color: yellow;
+        padding: 30px;
+        width: 300px;
+        margin-bottom: 50px;
+        &--header{
+            margin-bottom: 2%;
+        }
+        &--text{
+            margin-bottom: 50px;
+        }
+        &--button{
+
+        }
+    }
+}
+
+.cards {
+    margin: 20px;
+    border: 2px solid black;
+    box-shadow: 5px 5px rgba(0,0,0, .3);
+    text-align: center;
+    padding: 20px 0;
+    &__header{
+        font-family: $sourceSansPro;
+    }
+    &__image{
+
+    }
+    &__button{
+        display: block;
+        margin: 30px 10px;
+        padding: 10px 30px;
+        background-color: black;
+        color: white;
+        &:hover {
+            background-color: orangered;
+            text-decoration: none;
+        }
+    }
+}
