@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { Router } from "@angular/router";
 import { MtgcardsService } from "./../../services/mtgcards.service";
 import "rxjs";
+import { FormGroup, FormControl } from '@angular/forms';
 
 
 @Component({
@@ -11,7 +12,7 @@ import "rxjs";
   providers: [MtgcardsService],
 })
 export class DashboardPageComponent implements OnInit {
-
+  hasImage: Boolean = true;
   public mtgCardsArray: Array<any>;
 
   constructor(protected router: Router, protected MtcardsService: MtgcardsService) { }
@@ -23,5 +24,7 @@ export class DashboardPageComponent implements OnInit {
         this.mtgCardsArray = myCard.cards;
         console.log(this.mtgCardsArray, "this is the cards array");
       });
+
   }
+  
 }

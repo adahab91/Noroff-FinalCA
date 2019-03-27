@@ -1,3 +1,5 @@
-<p>
-  about-page works!
-</p>
+<div class="btn btn-primary" (click)="isFoo = !isFoo" >
+    Defeat your opponent
+</div>
+
+<div *ngIf="isFoo" >SOME TEXT I WANT TO TOGGLE</div>
