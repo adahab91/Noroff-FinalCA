@@ -1,0 +1,10 @@
+.navigation{
+    &__item{
+        &--link{
+            &:hover{
+                color: orangered!important;
+
+            }
+        }
+    }
+}

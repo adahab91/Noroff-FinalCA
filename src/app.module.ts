@@ -9,6 +9,11 @@ import { DashboardPageComponent } from './pages/dashboard-page/dashboard-page.co
 import { routing } from "./app.routes";
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { CardspecificPageComponent } from './pages/cardspecific-page/cardspecific-page.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { AboutPageComponent } from './pages/about-page/about-page.component';
+
+
 
 @NgModule({
   declarations: [
@@ -17,6 +22,10 @@ import { CardspecificPageComponent } from './pages/cardspecific-page/cardspecifi
     DashboardPageComponent,
     LoginPageComponent,
     CardspecificPageComponent,
+    HeaderComponent,
+    FooterComponent,
+    AboutPageComponent,
+
   ],
   imports: [
     BrowserModule,
