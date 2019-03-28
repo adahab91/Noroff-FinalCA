@@ -1,16 +1,22 @@
+<app-header></app-header>
 <div class="[ container ]">
   <h1 class="[ dashboard__header ]">Magic the gathering cards page</h1>
   
-<!--FILTER-->
-<input (keyup)="onKey($event)">
-  <p>{{values}}</p>
-<!--FILTER-->
+  <input [(ngModel)]="searchText" placeholder="search text goes here">
 
 
-
-
-  
   <div class="[ row ]">
+    <div class="[ col-sm-4 ][ cards__container ]" *ngFor="let myCard of mtgCardsArray | filter : searchText">
+        <div class="[ cards ]">
+            <h3 class="[ cards__heading ]">{{myCard.name}}</h3>
+            <img class="[ cards__image img-fluid ]" src="{{myCard.imageUrl}}"/><br>
+            <a class="[ cards__button ]" href="/cardspecific/{{myCard.id}}">View more</a>
+          </div>
+    </div>
+  </div>
+
+
+  <!-- <div class="[ row ]">
     <div class="[ col-sm-4 ][ cards__container ]" *ngFor="let myCard of mtgCardsArray">
       <div class="[ cards ]">
           <h3 class="[ cards__heading ]">{{myCard.name}}</h3>
@@ -18,6 +24,7 @@
           <a class="[ cards__button ]" href="/cardspecific/{{myCard.id}}">View more</a>
         </div>
     </div>
-  </div>
+  </div> -->
 
 </div>
+<app-footer></app-footer>

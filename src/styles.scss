@@ -1,44 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro|Yeon+Sung');
-$sourceSansPro: "Source Sans Pro", sans-serif;
-$yeonSung: 'Yeon Sung', cursive;
+@import url('https://fonts.googleapis.com/css?family=Cardo|Markazi+Text:700');
+$cardo: 'Cardo', serif;
+$markazi: 'Markazi Text', serif;
 
-body{
-    
-}
-
-/* a {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    padding: 10px;
-    background-color: black;
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: .8em;
-    margin: 30px 0;
-    &:hover{
-        color: black;
-        background-color: lightgrey;
-    }
-} */
 
 h1 {
     text-transform: uppercase;
     margin-bottom: 10%;
     font-size: 3em;
+    font-family: $markazi;
 }
 
 h2{
-    font-family: 'Gill Sans', 'Gill Sans MT', "Calibri", 'Trebuchet MS', sans-serif;
+    font-family: $markazi;
     text-transform: uppercase;
-    margin-bottom: 10%;
-    font-size: 1.3em;
+    margin-bottom: 5%;
+    font-size: 2.7em;
+}
+h3{
+    font-family: $markazi;
+    font-size: 1.8em;
 }
 
 .container{
     margin: 5% 20% 20%;
-}
-
-p{
-    font-family: 'Courier New', Courier, monospace;
 }

@@ -1,8 +1,9 @@
 import { Component, OnInit, Output, EventEmitter, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { Router } from "@angular/router";
-import { MtgcardsService } from "./../../services/mtgcards.service";
 import "rxjs";
-import { FormGroup, FormControl } from '@angular/forms';
+//import { FormGroup, FormControl } from '@angular/forms';
+
+import { MtgcardsService } from "./../../services/mtgcards.service";
 
 
 @Component({
@@ -14,6 +15,7 @@ import { FormGroup, FormControl } from '@angular/forms';
 export class DashboardPageComponent implements OnInit {
   hasImage: Boolean = true;
   public mtgCardsArray: Array<any>;
+  public searchArray: Array<any>;
 
   constructor(protected router: Router, protected MtcardsService: MtgcardsService) { }
 
@@ -22,9 +24,10 @@ export class DashboardPageComponent implements OnInit {
     .subscribe(
       myCard => {
         this.mtgCardsArray = myCard.cards;
+        this.searchArray = myCard.cards;
         console.log(this.mtgCardsArray, "this is the cards array");
+        console.log(this.searchArray, "this is the cards array");
       });
 
   }
-  
 }

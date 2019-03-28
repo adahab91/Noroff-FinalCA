@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from "@angular/forms";
+import { ReactiveFormsModule, FormsModule } from "@angular/forms";
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app/app.component';
@@ -12,6 +12,8 @@ import { CardspecificPageComponent } from './pages/cardspecific-page/cardspecifi
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AboutPageComponent } from './pages/about-page/about-page.component';
+import { FilterPipe } from "./pipes/filter.pipe";
+import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 
 
 
@@ -25,13 +27,15 @@ import { AboutPageComponent } from './pages/about-page/about-page.component';
     HeaderComponent,
     FooterComponent,
     AboutPageComponent,
-
+    FilterPipe,
+    ContactPageComponent
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     routing,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

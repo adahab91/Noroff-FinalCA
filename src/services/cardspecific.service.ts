@@ -11,14 +11,14 @@ export class CardspecificService {
   constructor(private http: HttpClient) { }
 
   private url = "https://api.magicthegathering.io/v1/cards/";
-  private conversionUrl = "https://cors-anywhere.herokuapp.com/";
+  private conversionUrl = "https://cors-anywhere.herokuapp.com/"; 
 
   
-  getSpecificCard(id): Observable<any> {
-    return this.http.get(this.url+'?id='+id).pipe(
+  getSpecificCard(urlId): Observable<any> {
+    return this.http.get(this.url+'?id='+urlId).pipe(
       map(response => { 
           console.log('from service response',response);
-          console.log('from service id',id);
+          console.log('from service id',urlId);
           return response
       })
     );

@@ -1,5 +1,25 @@
-<div class="btn btn-primary" (click)="isFoo = !isFoo" >
-    Defeat your opponent
+<app-header></app-header>
+<div class="[ container ]">
+    <h1 class="[  ]">About page</h1>
+    
+    <div class="[ col-md-8 ][ toggle__click ]" (click)="isFoo = !isFoo" >
+        <div class="[ row ]">
+            <div class="[ col-11 ]">
+                    <p class="[ toggle__click--text ]">How to defeat your opponent</p>
+            </div>
+            <div class="[ col-1 ]">
+                    <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+        
+    </div>
+        
+    <div class="[ col-md-8 ][ toggle__content ]" *ngIf="isFoo" >
+        <p class="[ toggle__content--text ]">Each players starts the game with 20 life. Knock your opponent down to 0 life, and you win. The most common way to do this is to summon creatures and attack with them.</p>
+        <p class="[ toggle__content--text ]">Creature cards are the most important of many Something decks. Theyre really easy to spot--just look at the lower right of a card. If you see a pair of numbers seperated by a stash youve got a creature card. Once its on the battlefield, a creature continues to attack and defend for you until your opponent can find a way to take it out.</p>
+        <p class="[ toggle__content--text ]">Most games become a race to see who can deal with most damage first. Summoning the best creatures would help you win that race every time. Check out the section on casting creature spells.</p>
+    </div>
+    
 </div>
 
-<div *ngIf="isFoo" >SOME TEXT I WANT TO TOGGLE</div>
+<app-footer></app-footer>

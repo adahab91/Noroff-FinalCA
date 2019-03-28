@@ -4,7 +4,7 @@ import { Router } from "@angular/router";
 import { ActivatedRoute } from "@angular/router";
 import "rxjs";
 
-
+ 
 @Component({
   selector: 'app-cardspecific-page',
   templateUrl: './cardspecific-page.component.html',

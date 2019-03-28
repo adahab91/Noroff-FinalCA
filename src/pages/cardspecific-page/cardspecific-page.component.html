@@ -1,7 +1,16 @@
-<div class="[ col-sm-4 ][ cards__container ]" *ngFor="let myCard of specificCardArray">
+<app-header></app-header>
+<div class="[ container ][ card__container ]" *ngFor="let myCard of specificCardArray">
   <div class="[ cards ]">
-      <h3 class="[ cards__heading ]">{{myCard.name}}</h3>
-      <img class="[ cards__image img-fluid ]" src="{{myCard.imageUrl}}"/><br>
-      <p>{{myCard.text}}</p>
+    <div class="[ row ]">
+      <div class="[ col-sm-3 ]"><img class="[ cards__image][ img-fluid ]" src="{{myCard.imageUrl}}"/><br></div>
+      <div class="[ col-sm-8 ]">
+        <h2 class="[ cards__heading ]">{{myCard.name}}</h2>
+        <p class="[ cards__text ]"><span class="[ cards__text--strong ]">Rarity: </span>{{myCard.rarity}}</p>
+        <p class="[ cards__text ]"><span class="[ cards__text--strong ]">Color: </span>{{myCard.colors[0]}}</p>
+        <p class="[ cards__text ]"><span class="[ cards__text--strong ]">About: </span>{{myCard.text}}</p>
+        <p class="[ cards__text ]"><span class="[ cards__text--strong ]">Flavor: </span>{{myCard.flavor}}</p>
+      </div>
     </div>
+  </div>
 </div>
+<app-footer></app-footer>
