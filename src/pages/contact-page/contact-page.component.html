@@ -4,27 +4,52 @@
 
   <div class="jumbotron">
       <h2>Form with Validations</h2>
-      <form [formGroup]="complexForm" (ngSubmit)="onSubmit(complexForm.value)">
+      <form [formGroup]="complexForm" (ngSubmit)="validateForm(complexForm.value)">
+
+
+        <!--First name validator-->
         <div class="form-group" [ngClass]="{'has-error':!complexForm.controls['firstName'].valid && complexForm.controls['firstName'].touched}">
           <label>First Name:</label>
-          <input class="form-control" type="text" placeholder="John" [formControl]="complexForm.controls['firstName']">
-          <!-- The hasError method will tell us if a particular error exists -->
+          <input class="form-control" type="text" placeholder="First name" [formControl]="complexForm.controls['firstName']">
           <div *ngIf="complexForm.controls['firstName'].hasError('required') && complexForm.controls['firstName'].touched" class="alert alert-danger">You must include a first name.</div>
-          <div *ngIf="complexForm.controls['firstName'].hasError('minlength') && complexForm.controls['firstName'].touched" class="alert alert-danger">Your first name must be at least 5 characters long.</div>
-          <div *ngIf="complexForm.controls['firstName'].hasError('maxlength') && complexForm.controls['firstName'].touched" class="alert alert-danger">Your first name cannot exceed 10 characters.</div>
+          <div *ngIf="complexForm.controls['firstName'].hasError('minlength') && complexForm.controls['firstName'].touched" class="alert alert-danger">Your first name must be at least 2 characters long.</div>
+          <div *ngIf="complexForm.controls['firstName'].hasError('maxlength') && complexForm.controls['firstName'].touched" class="alert alert-danger">Your first name cannot exceed 20 characters.</div>
         </div>
+
+
+        <!--Last name validator-->
         <div class="form-group" [ngClass]="{'has-error':!complexForm.controls['lastName'].valid && complexForm.controls['lastName'].touched}">
           <label>Last Name</label>
-          <input class="form-control" type="text" placeholder="Doe" [formControl]="complexForm.controls['lastName']">
-          <!-- The hasError method can work with the built in validators but custom validators as well -->
+          <input class="form-control" type="text" placeholder="Last name" [formControl]="complexForm.controls['lastName']">
           <div *ngIf="complexForm.controls['lastName'].hasError('required') && complexForm.controls['lastName'].touched" class="alert alert-danger">You must include a last name.</div>
-          <div *ngIf="complexForm.controls['lastName'].hasError('minlength') && complexForm.controls['lastName'].touched" class="alert alert-danger">Your last name must be at least 5 characters long.</div>
-          <div *ngIf="complexForm.controls['lastName'].hasError('maxlength') && complexForm.controls['lastName'].touched" class="alert alert-danger">Your last name cannot exceed 10 characters.</div>
+          <div *ngIf="complexForm.controls['lastName'].hasError('minlength') && complexForm.controls['lastName'].touched" class="alert alert-danger">Your last name must be at least 2 characters long.</div>
+          <div *ngIf="complexForm.controls['lastName'].hasError('maxlength') && complexForm.controls['lastName'].touched" class="alert alert-danger">Your last name cannot exceed 20 characters.</div>
         </div>
+
+        <!--Email validation-->
+        <div class="form-group" [ngClass]="{'has-error':!complexForm.controls['e-mail'].valid && complexForm.controls['e-mail'].touched}">
+          <label>Email</label>
+          <input class="form-control" type="email" placeholder="Email" [formControl]="complexForm.controls['e-mail']">
+          <div *ngIf="complexForm.controls['e-mail'].hasError('required') && complexForm.controls['e-mail'].touched" class="alert alert-danger">You must include an email adress.</div>
+          <div *ngIf="complexForm.controls['e-mail'].hasError('email') && complexForm.controls['e-mail'].touched" class="alert alert-danger">Write in a valid email adress.</div>
+        </div>
+
+
+        <!--Phone validation-->
+        <div class="form-group" [ngClass]="{'has-error':!complexForm.controls['phone'].valid && complexForm.controls['phone'].touched}">
+            <label>Phone</label>
+            <input class="form-control" type="text" placeholder="Phone" [formControl]="complexForm.controls['phone']">
+            <div *ngIf="complexForm.controls['phone'].hasError('required') && complexForm.controls['phone'].touched" class="alert alert-danger">You must include a phone number.</div>
+            <div *ngIf="complexForm.controls['phone'].hasError('pattern') && complexForm.controls['phone'].touched" class="alert alert-danger">Write in a valid phone number (etc. 123 123 1234, 123-123-1234 or 123.123.1234).</div>
+          </div>
+
+
+        <!--Submit button-->
         <div class="form-group">
-          <!-- <button type="submit" class="btn btn-primary" [disabled]="!complexForm.valid">Submit</button> -->
           <button type="submit" class="btn btn-primary" (click)="validateForm()" >Submit</button>
+          <div class="alert alert-success" *ngIf="complexForm.controls['submitted'].valid && complexForm.controls['submitted'].touched">You have successfully submitted your form.</div>
         </div>
+
       </form>
     </div>
 

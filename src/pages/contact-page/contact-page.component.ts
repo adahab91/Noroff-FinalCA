@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-// We will need to import a couple of specific API’s for dealing with reactive forms
+import { Router } from "@angular/router";
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
@@ -9,16 +9,23 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 })
 export class ContactPageComponent{
   // The FormGroup object as you may remember from the simple form example exposes various API’s for dealing with forms. Here we are creating a new object and setting its type to FormGroup
+
   complexForm : FormGroup;
 
   // We are passing an instance of the FormBuilder to our constructor
-  constructor(fb: FormBuilder){
+  constructor(fb: FormBuilder, protected router: Router){
     // Here we are using the FormBuilder to build out our form.
     this.complexForm = fb.group({
-      // We can set default values by passing in the corresponding value or leave blank if we wish to not set the value. For our example, we’ll default the gender to female.
+
       'firstName' : [null, Validators.compose([Validators.required, Validators.minLength(2), Validators.maxLength(20)])],
-      // We can use more than one validator per field. If we want to use more than one validator we have to wrap our array of validators with a Validators.compose function. Here we are using a required, minimum length and maximum length validator.
+
       'lastName': [null, Validators.compose([Validators.required, Validators.minLength(2), Validators.maxLength(20)])],
+
+      'e-mail': [null, Validators.compose([Validators.required, Validators.email, Validators.maxLength(20)])],
+
+      'phone': [null, Validators.compose([Validators.required, Validators.pattern("([0-9]{3})[-. ]?([0-9]{3})[-. ]?([0-9]{4})")])],
+
+      "submitted": false,
     })
   }
 
@@ -33,8 +40,14 @@ export class ContactPageComponent{
     if (this.complexForm.invalid) {
       this.complexForm.get('firstName').markAsTouched();
       this.complexForm.get('lastName').markAsTouched();
+      this.complexForm.get('e-mail').markAsTouched();
+      this.complexForm.get('phone').markAsTouched();
       return;
+    } else {
+      this.complexForm.get('submitted').markAsTouched();
+      setTimeout(function(){ 
+        window.location.reload();
+      }, 3000);
     }
-    // do something else
 }
 }
