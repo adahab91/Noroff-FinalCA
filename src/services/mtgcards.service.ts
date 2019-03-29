@@ -17,7 +17,7 @@ export class MtgcardsService{
   getCards(): Observable<any> {
     return this.http.get(this.url).pipe(
       map(response => {
-          console.log('from service  jrjr',response)
+          console.log('from service',response)
           return response
       })
     );

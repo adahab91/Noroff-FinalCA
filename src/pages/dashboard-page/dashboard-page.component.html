@@ -2,29 +2,23 @@
 <div class="[ container ]">
   <h1 class="[ dashboard__header ]">Magic the gathering cards page</h1>
   
-  <input [(ngModel)]="searchText" placeholder="search text goes here">
+  <!--Search-->
+  <div class="[ search ]">
+    <h3 class="[ search__heading ]">Search for your hero:</h3>
+    <input class="[ search__input ]" (keyup)="applyFilter($event.target.value);">
 
-
-  <div class="[ row ]">
-    <div class="[ col-sm-4 ][ cards__container ]" *ngFor="let myCard of mtgCardsArray | filter : searchText">
-        <div class="[ cards ]">
-            <h3 class="[ cards__heading ]">{{myCard.name}}</h3>
-            <img class="[ cards__image img-fluid ]" src="{{myCard.imageUrl}}"/><br>
-            <a class="[ cards__button ]" href="/cardspecific/{{myCard.id}}">View more</a>
-          </div>
-    </div>
   </div>
 
-
-  <!-- <div class="[ row ]">
-    <div class="[ col-sm-4 ][ cards__container ]" *ngFor="let myCard of mtgCardsArray">
+  <!--card display-->
+  <div class="[ row ]">
+    <div class="[ col-sm-4 ][ cards__container ]" *ngFor="let myCard of searchArray">
       <div class="[ cards ]">
           <h3 class="[ cards__heading ]">{{myCard.name}}</h3>
-          <img class="[ cards__image img-fluid ]" src="{{myCard.imageUrl}}"/><br>
+          <img class="[ cards__image img-fluid ]" src="{{myCard.imageUrl}}" onError="this.src='./../../assets/images/placeholderimg.jpg'"/><br>
           <a class="[ cards__button ]" href="/cardspecific/{{myCard.id}}">View more</a>
         </div>
     </div>
-  </div> -->
+  </div> 
 
 </div>
 <app-footer></app-footer>

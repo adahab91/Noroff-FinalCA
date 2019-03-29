@@ -12,7 +12,6 @@ import { CardspecificPageComponent } from './pages/cardspecific-page/cardspecifi
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AboutPageComponent } from './pages/about-page/about-page.component';
-import { FilterPipe } from "./pipes/filter.pipe";
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 
 
@@ -27,7 +26,6 @@ import { ContactPageComponent } from './pages/contact-page/contact-page.componen
     HeaderComponent,
     FooterComponent,
     AboutPageComponent,
-    FilterPipe,
     ContactPageComponent
   ],
   imports: [

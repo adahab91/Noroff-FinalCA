@@ -9,7 +9,7 @@ import { LoginService } from "./../../services/login.service";
   providers: [LoginService]
 })
 export class LoginPageComponent implements OnInit {
-  title: String = "Please login to continue to your Dashboard";
+  title: String = "Login";
   isUsername: Boolean = false;
   isPassword: Boolean = false;
   userObj;
@@ -32,7 +32,6 @@ export class LoginPageComponent implements OnInit {
   }
   testUserDetails(userdetails){
     if (userdetails.username !== this.userObj.username || userdetails.password !== this.userObj.password){
-      this.title = "Please do some changes";
       if(userdetails.username !== this.userObj.username){
         this.isUsername = true;
       }
