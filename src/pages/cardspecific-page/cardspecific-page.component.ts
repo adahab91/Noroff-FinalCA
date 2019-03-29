@@ -23,11 +23,13 @@ export class CardspecificPageComponent implements OnInit {
       console.log(urlId, "this is urlId");
     
 
-    this.CardspecificService.getSpecificCard(urlId).subscribe(myCard => {
-        this.specificCardArray = myCard.cards;
-        console.log(myCard, "this is myCard");
-        console.log(urlId, "this is urlId");
-        console.log(this.specificCardArray, "this is the cards array");
+    this.CardspecificService.getSpecificCard(urlId)
+      .subscribe(
+        myCard => {
+            this.specificCardArray = myCard.cards;
+            console.log(myCard, "this is myCard");
+            console.log(urlId, "this is urlId");
+            console.log(this.specificCardArray, "this is the cards array");
       })
     })
   } 

@@ -1,9 +1,9 @@
 <app-header></app-header>
-<div class="[ container ][ card__container ]" *ngFor="let myCard of specificCardArray">
+<div class="[ container ][ cards__container ]" *ngFor="let myCard of specificCardArray">
   <div class="[ cards ]">
     <div class="[ row ]">
-      <div class="[ col-sm-3 ]"><img class="[ cards__image][ img-fluid ]" src="{{myCard.imageUrl}}"/><br></div>
-      <div class="[ col-sm-8 ]">
+      <div class="[ col-md-3 ]"><img class="[ cards__image][ img-fluid ]" src="{{myCard.imageUrl}}"/><br></div>
+      <div class="[ col-md-8 ]">
         <h2 class="[ cards__heading ]">{{myCard.name}}</h2>
         <p class="[ cards__text ]"><span class="[ cards__text--strong ]">Rarity: </span>{{myCard.rarity}}</p>
         <p class="[ cards__text ]"><span class="[ cards__text--strong ]">Color: </span>{{myCard.colors[0]}}</p>
@@ -12,5 +12,6 @@
       </div>
     </div>
   </div>
+  <a class="[ cards__button ]" href="/dashboard"><i class="[ fas fa-chevron-left ][ cards__arrow ]"></i> Back</a>
 </div>
 <app-footer></app-footer>

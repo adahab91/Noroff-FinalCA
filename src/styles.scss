@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css?family=Cardo|Markazi+Text:700');
-$cardo: 'Cardo', serif;
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600');
+$source-sans-pro: 'Source Sans Pro', sans-serif;
 $markazi: 'Markazi Text', serif;
 
 
@@ -22,6 +23,15 @@ h3{
     font-size: 1.8em;
 }
 
+p{
+    font-family:  $source-sans-pro;
+}
+
+a{
+    font-family: $source-sans-pro;
+}
+
 .container{
-    margin: 5% 20% 20%;
+    margin-top: 5%;
+    margin-bottom: 10%;
 }

@@ -1,6 +1,6 @@
 <app-header></app-header>
 <div class="[ container ]">
-  <h1 class="[ dashboard__header ]">Magic the gathering cards page</h1>
+  <h1 class="[ header ]">Magic the gathering cards page</h1>
   
   <!--Search-->
   <div class="[ search ]">
@@ -11,10 +11,10 @@
 
   <!--card display-->
   <div class="[ row ]">
-    <div class="[ col-sm-4 ][ cards__container ]" *ngFor="let myCard of searchArray">
+    <div class="[ col-lg-4 col-md-6 ][ cards__container ]" *ngFor="let myCard of searchArray">
       <div class="[ cards ]">
           <h3 class="[ cards__heading ]">{{myCard.name}}</h3>
-          <img class="[ cards__image img-fluid ]" src="{{myCard.imageUrl}}" onError="this.src='./../../assets/images/placeholderimg.jpg'"/><br>
+          <img class="[ cards__image img-fluid ]" src="{{myCard.imageUrl}}" onError="this.src='./../../assets/images/placeholder-img.png'"/><br>
           <a class="[ cards__button ]" href="/cardspecific/{{myCard.id}}">View more</a>
         </div>
     </div>

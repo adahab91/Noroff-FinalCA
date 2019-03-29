@@ -6,14 +6,13 @@
     </div>
     <div class="[ col-md-8 ][ toggle__click ]" (click)="isFoo = !isFoo" >
         <div class="[ row ]">
-            <div class="[ col-11 ]">
+            <div class="[ col-10 ]">
                     <p class="[ toggle__click--text ]">How to defeat your opponent</p>
             </div>
-            <div class="[ col-1 ]">
-                    <i class="fas fa-chevron-down"></i>
+            <div class="[ col-2 ]">
+                    <i class="[ toggle__click--icon ][ fas fa-chevron-down ]"></i>
             </div>
         </div>
-        
     </div>
         
     <div class="[ col-md-8 ][ toggle__content ]" *ngIf="isFoo" >

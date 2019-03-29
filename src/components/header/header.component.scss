@@ -1,9 +1,9 @@
 .navigation{
+    padding-right: 30px;
     &__item{
         &--link{
             &:hover{
                 color: orangered!important;
-
             }
         }
     }
