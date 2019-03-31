@@ -1,11 +1,14 @@
-<div class="[ login ]">
-  <div>
-    <form class="[ form ]" [formGroup]="form" (ngSubmit)="userDetails(form.value)">
-      <input class="[ form__input ]" type="text" placeholder="Please enter a username" formControlName="username"/>
-      <span class="[ errors ][ form__span ]" *ngIf="isUsername">Wrong username</span><br/>
-      <input class="[ form__input ]" type="password" placeholder="Please enter a password" formControlName="password"/>
-      <span class="[ errors ][ form__span ]" *ngIf="isPassword">Wrong password</span><br/>
-      <button class="[ form__btn ]" type="Submit">Submit</button>
-    </form>
-  </div> 
+<div class="[ container ]">
+  <div class="[ col-md-5 ][ login ]">
+    <div>
+      <h1 class="[ login__header ]">Login</h1>
+      <form class="[ form ]" [formGroup]="form" (ngSubmit)="userDetails(form.value)">
+        <input class="[ form__input ]" type="text" placeholder="Please enter a username" formControlName="username"/>
+        <span class="[ errors ][ form__span ]" *ngIf="isUsername">Wrong username</span><br/>
+        <input class="[ form__input ]" type="password" placeholder="Please enter a password" formControlName="password"/>
+        <span class="[ errors ][ form__span ]" *ngIf="isPassword">Wrong password</span><br/>
+        <button class="[ form__btn ]" type="Submit">Submit</button>
+      </form>
+    </div> 
+  </div>
 </div>

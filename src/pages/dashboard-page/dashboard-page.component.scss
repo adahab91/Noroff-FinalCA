@@ -14,6 +14,9 @@ $sourceSansPro: "Source Sans Pro", sans-serif;
         background-color: white;
         font-family: $sourceSansPro;
         font-size: 1.2em;
+        @media screen and (max-width: 350px){
+            width: 93%;
+        }
     }
 }
 

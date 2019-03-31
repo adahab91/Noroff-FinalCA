@@ -1,10 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600');
 $source-sans-pro: 'Source Sans Pro', sans-serif;
-
+.login{
+    border: 2px solid black;
+    box-shadow: 5px 5px rgba(0,0,0, .3);
+    border-radius: 2px;
+    padding: 2%;
+    &__header{
+        margin-bottom: 3%;
+    }
+}
 .form{
+
     &__input{
         padding: 2px 5px;
-        width: 230px;
+        width: 80%;
         margin-bottom: 10px;
         font-family: $source-sans-pro;
     }

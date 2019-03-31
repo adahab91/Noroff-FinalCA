@@ -9,7 +9,6 @@ import { LoginService } from "./../../services/login.service";
   providers: [LoginService]
 })
 export class LoginPageComponent implements OnInit {
-  title: String = "Login";
   isUsername: Boolean = false;
   isPassword: Boolean = false;
   userObj;
