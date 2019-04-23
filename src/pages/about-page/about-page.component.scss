@@ -1,17 +1,27 @@
 .toggle{
     &__click{
-        background-color: orangered;
         padding: 5px;
-        border: 2px solid black;
+        border: 2px solid orangered;
         box-shadow: 5px 5px rgba(0,0,0, .3);
         margin-top: 5%;
+        margin-left: 15px;
         border-radius: 2px 2px 0 0 ;
         :hover{
             cursor: pointer;
         }
+        @media screen and (max-width: 350px){
+            margin-left: 0;
+        }
         &--text{
             margin: 0;
-            color: white;
+            font-weight: 600;
+            padding: 6px 12px;
+        }
+        &--icon{
+            padding: 12px 12px;
+            @media screen and (max-width: 350px){
+                padding-left: 0;
+            }
         }
     }
     &__content{
@@ -21,6 +31,10 @@
         padding: 40px 20px 0;
         border-radius: 0 0 2px 2px;
         border-top: none;
+        margin-left: 15px;
+        @media screen and (max-width: 350px){
+            margin-left: 0;
+        }
         &--text{
             padding: 0 0 40px ;
         }

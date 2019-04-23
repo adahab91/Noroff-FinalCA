@@ -3,13 +3,29 @@
     border: 2px solid black;
     box-shadow: 5px 5px rgba(0,0,0, .3);
     padding: 40px 20px;
-    &__image{
-
-    }
+    border-radius: 2px;
     &__text{
         &--strong{
-            font-weight: 700;
+            font-weight: 600;
             text-transform: uppercase;
+            color: orangered;
+            font-size: 1.1em;
         }
+    }
+    &__button{
+        display: block;
+        margin: 30px 10px 30px 20px;
+        padding: 10px 30px;
+        background-color: black;
+        color: white;
+        border-radius: 2px;
+        width: 150px;
+        &:hover {
+            background-color: orangered;
+            text-decoration: none;
+        }
+    }
+    &__arrow{
+        padding-right: 10px;
     }
 }

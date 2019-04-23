@@ -9,21 +9,11 @@ import { LoginService } from "./../../services/login.service";
   providers: [LoginService]
 })
 export class LoginPageComponent implements OnInit {
-  title: String = "Login";
   isUsername: Boolean = false;
   isPassword: Boolean = false;
   userObj;
 
   constructor(protected loginService: LoginService, protected router: Router){}
-
- /*  isTrue: Boolean = false; 
-  myObject: Object = {
-    name: "myName",
-    lastName: "lastname"
-  };
-  myNumber: Number = 1;
-  unsureOfValue: any = [ ];
-  myArray: Array<Number> = [1,2,3]; */
 
   ngOnInit(){
     localStorage.setItem("Username", "Ada");

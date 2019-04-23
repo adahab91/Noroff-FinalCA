@@ -1,7 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { CardspecificService } from "../../services/cardspecific.service";
-import { Router } from "@angular/router";
-import { ActivatedRoute } from "@angular/router";
 import "rxjs";
 
 @Component({
@@ -14,6 +11,5 @@ export class AboutPageComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-  
   }
 }

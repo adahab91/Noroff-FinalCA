@@ -26,7 +26,6 @@ export class LoginComponent implements OnInit, OnChanges {
   ngOnChanges(changes: SimpleChanges) {
   }
 
-
   public userDetails(formValues: any) {
     this.userDetailObj.emit(formValues);
   }

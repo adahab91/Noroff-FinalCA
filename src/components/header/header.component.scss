@@ -1,9 +1,16 @@
 .navigation{
+    padding-right: 30px;
+    &__brand{
+        &--image{
+            @media screen and (max-width: 370px){
+                width: 180px;
+            }
+        }
+    }
     &__item{
         &--link{
             &:hover{
                 color: orangered!important;
-
             }
         }
     }
