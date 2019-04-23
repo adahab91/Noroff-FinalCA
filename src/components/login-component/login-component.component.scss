@@ -22,13 +22,13 @@ $source-sans-pro: 'Source Sans Pro', sans-serif;
         color: red;
         margin-left: 10px;
     }
+    &__text{
+        font-size: .8em;
+        color: grey;
+    }
     &__btn{
         display: block;
-<<<<<<< HEAD
         margin: 30px 10px;
-=======
-        margin: 30px 0px;
->>>>>>> 3fac96c8b47a6af160655d7d528e1a14cb34e8a4
         padding: 10px 30px;
         background-color: black;
         color: white;

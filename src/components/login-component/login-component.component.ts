@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit, OnChanges {
 
   @Input() isUsername: boolean;
   @Input() isPassword: boolean;
-
+ 
   constructor() { }
 
   ngOnInit() {
