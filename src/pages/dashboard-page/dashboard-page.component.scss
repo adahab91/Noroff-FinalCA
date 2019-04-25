@@ -3,6 +3,9 @@ $sourceSansPro: "Source Sans Pro", sans-serif;
 
 .header{
     margin-left: 20px;
+    @media screen and (max-width: 450px){
+        display: none;
+    }
 }
 
 .search{
@@ -14,7 +17,7 @@ $sourceSansPro: "Source Sans Pro", sans-serif;
         background-color: white;
         font-family: $sourceSansPro;
         font-size: 1.2em;
-        @media screen and (max-width: 350px){
+        @media screen and (max-width: 450px){
             width: 93%;
         }
     }

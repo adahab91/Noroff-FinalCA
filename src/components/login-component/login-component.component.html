@@ -1,11 +1,11 @@
 <div class="[ container ]">
-  <div class="[ col-md-5 ][ login ]">
+  <div class="[ col-md-6 ][ login ]">
     <div>
       <h1 class="[ login__header ]">Login</h1>
       <form class="[ form ]" [formGroup]="form" (ngSubmit)="userDetails(form.value)">
-        <input class="[ form__input ]" type="text" placeholder="Please enter a username" formControlName="username"/>
+        <input class="[ form__input ]" type="text" placeholder="Please enter a username" formControlName="username"/><br/>
         <span class="[ errors ][ form__span ]" *ngIf="isUsername">Wrong username</span><br/>
-        <input class="[ form__input ]" type="password" placeholder="Please enter a password" formControlName="password"/>
+        <input class="[ form__input ]" type="password" placeholder="Please enter a password" formControlName="password"/><br/>
         <span class="[ errors ][ form__span ]" *ngIf="isPassword">Wrong password</span><br/>
         <p class="[ form__text ]" >Username: Ada, Password: Ada123</p>
         <button class="[ form__btn ]" type="Submit">Submit</button>

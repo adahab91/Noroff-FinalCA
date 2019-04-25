@@ -25,13 +25,11 @@ export class LoginPageComponent implements OnInit {
     if (userdetails.username !== this.userObj.username || userdetails.password !== this.userObj.password){
       if(userdetails.username !== this.userObj.username){
         this.isUsername = true;
-        console.log(this.isUsername+"true, wrong username");
       } else{
         this.isUsername = false;
       }
       if(userdetails.password !== this.userObj.password){
         this.isPassword = true;
-        console.log(this.isUsername+"true, wrong password");
       } else{
         this.isPassword = false;
       }
@@ -40,8 +38,6 @@ export class LoginPageComponent implements OnInit {
       this.router.navigate(["/dashboard"]);
       this.isPassword = false;
       this.isUsername = false;
-      console.log(this.isUsername + "false, correct username");
-      console.log(this.isPassword + "false, correct password");
     }
   }
 }

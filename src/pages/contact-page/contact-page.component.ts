@@ -13,11 +13,11 @@ complexForm : FormGroup;
   constructor(fb: FormBuilder, protected router: Router){
     this.complexForm = fb.group({
 
-      'firstName' : [null, Validators.compose([Validators.required, Validators.minLength(2), Validators.maxLength(20)])],
+      'firstName' : [null, Validators.compose([Validators.required, Validators.pattern("^[A-ZÆØÅa-zæøå -\.]+$")])],
 
-      'lastName': [null, Validators.compose([Validators.required, Validators.minLength(2), Validators.maxLength(20)])],
+      'lastName': [null, Validators.compose([Validators.required, Validators.pattern("^[A-ZÆØÅ]{1}[a-zæøå -\.]+$")])],
 
-      'e-mail': [null, Validators.compose([Validators.required, Validators.email, Validators.maxLength(20)])],
+      'e-mail': [null, Validators.compose([Validators.required, Validators.pattern("^(([\\w-\\s]+)|([\\w-]+(?:\\.[\\w-]+)*)|([\\w-\\s]+)([\\w-]+(?:\\.[\\w-]+)*))(@((?:[\\w-]+\\.)*\\w[\\w-]{0,66})\\.([a-z]{2,6}(?:\\.[a-z]{2})?)$)|(@\\[?((25[0-5]\\.|2[0-4][0-9]\\.|1[0-9]{2}\\.|[0-9]{1,2}\\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\\]?$)")])],
 
       'phone': [null, Validators.compose([Validators.required, Validators.pattern("([0-9]{3})[-. ]?([0-9]{3})[-. ]?([0-9]{4})")])],
 
